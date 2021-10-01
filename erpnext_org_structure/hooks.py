@@ -11,6 +11,15 @@ app_color = "grey"
 app_email = "admin@gmail.com"
 app_license = "MIT"
 
+
+doctype_js = {
+	"User" : "erpnext_org_structure/doctype/user/user.js"
+}
+doc_events = {
+    	"User": {
+		"after_insert": ["erpnext_org_structure.erpnext_org_structure.doctype.user.user.on_save"]
+}
+}
 # Includes in <head>
 # ------------------
 
