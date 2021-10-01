@@ -19,7 +19,11 @@ fixtures = [
 	 "name", "in", [
 		"User-branch_details_section",
 		"User-branch_details",
-		"Quality Inspection-branch"
+		"Quality Inspection-branch",
+		"Material Request-branch",
+		"Purchase Receipt-branch",
+		"Purchase Order-branch",
+		"Sales Order-branch"
 	]
 	]
 ]
