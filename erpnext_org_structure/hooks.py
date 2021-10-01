@@ -12,6 +12,17 @@ app_email = "admin@gmail.com"
 app_license = "MIT"
 
 
+fixtures = [
+{"dt": "Custom Field",
+		"filters": [
+         [
+		"User-branch_details_section",
+		"User-branch_details"
+	]
+]
+}
+]
+
 doctype_js = {
 	"User" : "erpnext_org_structure/doctype/user/user.js"
 }
