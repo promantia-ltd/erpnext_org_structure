@@ -18,7 +18,7 @@ before_branch_details_remove:function(frm,cdt,cdn) {
     var row=frappe.get_doc(cdt,cdn);
     console.log(row)
     frappe.call({
-        method:"rangsutra.rangsutra.doctype.user.user.delete_user_permission",
+        method:"erpnext_org_structure.erpnext_org_structure.doctype.user.user.delete_user_permission",
         args:{
         user:frm.doc.email,
         branch:row.branch	

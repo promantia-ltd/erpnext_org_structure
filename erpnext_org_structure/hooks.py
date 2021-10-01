@@ -16,15 +16,19 @@ fixtures = [
 {"dt": "Custom Field",
 		"filters": [
          [
+	 "name", "in", [
 		"User-branch_details_section",
-		"User-branch_details"
+		"User-branch_details",
+		"Quality Inspection-branch"
+	]
 	]
 ]
 }
 ]
 
 doctype_js = {
-	"User" : "erpnext_org_structure/doctype/user/user.js"
+	"User" : "erpnext_org_structure/doctype/user/user.js",
+	"Quality Inspection" : "erpnext_org_structure/doctype/quality_inspection/quality_inspection.js"
 }
 doc_events = {
     	"User": {
