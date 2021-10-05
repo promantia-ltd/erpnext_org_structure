@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "field:label",
+ "creation": "2021-10-04 11:08:46.152538",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference_document_type",
+  "label",
+  "fieldname",
+  "injected_document_details_section",
+  "injected_document_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference_document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reference Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "injected_document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Injected Document Details"
+  },
+  {
+   "fieldname": "injected_document_details",
+   "fieldtype": "Table",
+   "label": "Injected Document Details",
+   "options": "Injected Document Details"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Organisation Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "fieldname",
+   "fieldtype": "Data",
+   "label": "Fieldname"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-10-05 14:10:08.843761",
+ "modified_by": "Administrator",
+ "module": "erpnext_org_structure",
+ "name": "Organisation Setup Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
