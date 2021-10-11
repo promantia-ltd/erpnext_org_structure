@@ -13,11 +13,11 @@ from frappe.custom.doctype.custom_field.custom_field import create_custom_field
 
 class OrganisationSetupTool(Document):
     def validate(self):
-        exists = frappe.db.get_value("Organisation Setup", {
-                                     'document_type': self.reference_document_type}, ['name'])
+        exists = frappe.db.get_value("Organisation Setup Tool", {
+                                     'reference_document_type': self.reference_document_type}, ['name'])
 
         if exists and self.is_new():
-            frappe.throw("Document Type already used as a dimension")
+            frappe.throw("Reference Document Type already exists")
 
         if not self.is_new():
             self.validate_document_type_change()
