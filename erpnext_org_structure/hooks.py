@@ -44,7 +44,8 @@ doctype_js = {
 }
 doc_events = {
     	"User": {
-		"after_insert": ["erpnext_org_structure.erpnext_org_structure.doctype.user.user.on_save"]
+		"after_insert": ["erpnext_org_structure.erpnext_org_structure.doctype.user.user.on_save"],
+		"on_update":["erpnext_org_structure.erpnext_org_structure.doctype.user.user.on_save"]
 }
 }
 # Includes in <head>

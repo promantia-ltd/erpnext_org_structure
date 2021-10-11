@@ -35,18 +35,19 @@
   {
    "fieldname": "label",
    "fieldtype": "Data",
-   "label": "Organisation Name",
+   "label": "Reference Doctype Name",
    "unique": 1
   },
   {
    "fieldname": "fieldname",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Fieldname"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-10-05 14:10:08.843761",
+ "modified": "2021-10-11 16:29:04.297576",
  "modified_by": "Administrator",
  "module": "erpnext_org_structure",
  "name": "Organisation Setup Tool",
