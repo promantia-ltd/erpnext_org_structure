@@ -26,7 +26,9 @@ fixtures = [
          [
 	 "name", "in", [
 		"User-branch_details_section",
-		"User-branch_details"
+		"User-branch_details",
+		"Branch-address",
+		"Branch-abbr"
 	]
 	]
 ]
