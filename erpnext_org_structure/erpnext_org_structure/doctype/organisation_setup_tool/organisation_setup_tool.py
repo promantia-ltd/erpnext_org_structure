@@ -17,12 +17,12 @@ class OrganisationSetupTool(Document):
                                      'reference_document_type': self.reference_document_type}, ['name'])
 
         if exists and self.is_new():
-            frappe.throw("Reference Document Type already exists")
+            frappe.throw('Reference Document Type "{0}" is already exists'.format(exists))
 
         if not self.is_new():
             self.validate_document_type_change()
 
-        make_dimension_in_accounting_doctypes(doc=self)
+        make_custom_field_in_doctypes(doc=self)
 
     def validate_document_type_change(self):
         doctype_before_save = frappe.db.get_value(
@@ -33,10 +33,10 @@ class OrganisationSetupTool(Document):
             frappe.throw(message)
 
     def on_trash(self):
-        delete_accounting_dimension(doc=self)
+        delete_custom_fields(doc=self)
 
 
-def make_dimension_in_accounting_doctypes(doc):
+def make_custom_field_in_doctypes(doc):
     doclist = get_doctypes_with_dimensions()
 
     for val in doc.injected_document_details:
@@ -67,7 +67,7 @@ def get_doctypes_with_dimensions():
     return frappe.get_hooks("accounting_dimension_doctypes")
 
 
-def delete_accounting_dimension(doc):
+def delete_custom_fields(doc):
     for val in doc.injected_document_details:
         frappe.db.sql("""delete from `tabCustom Field` where fieldname = %s AND dt = %s""",
                       (doc.label, val.reference_document))
