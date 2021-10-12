@@ -35,7 +35,8 @@ fixtures = [
 
 doctype_js = {
 	"User" : "erpnext_org_structure/doctype/user/user.js",
-	"Quality Inspection" : "erpnext_org_structure/doctype/quality_inspection/quality_inspection.js"
+	"Quality Inspection" : "erpnext_org_structure/doctype/quality_inspection/quality_inspection.js",
+	"Branch" : "erpnext_org_structure/doctype/branch/branch.js"
 }
 doc_events = {
     	"User": {
