@@ -21,7 +21,7 @@ frappe.ui.form.on("Organisation Setup Tool", {
 
 	},
 	label: function (frm) {
-		frm.set_value('fieldname', frappe.model.scrub(frm.doc.label));
+		frm.set_value('fieldname', frappe.model.scrub(frm.doc.reference_document_type));
 	}
 
 });
