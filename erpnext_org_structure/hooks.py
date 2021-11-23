@@ -46,6 +46,11 @@ doc_events = {
 		"on_update":["erpnext_org_structure.erpnext_org_structure.doctype.user.user.on_save"]
 }
 }
+
+override_doctype_class = {
+	'Accounting Period': 'erpnext_org_structure.api.CustomAccountingPeriod'
+}
+
 # Includes in <head>
 # ------------------
 
