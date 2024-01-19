@@ -2,6 +2,9 @@
 from __future__ import unicode_literals
 from . import __version__ as app_version
 
+import erpnext.accounts.general_ledger as _standard_gl
+import erpnext_org_structure.api as _custom_api
+
 app_name = "erpnext_org_structure"
 app_title = "erpnext_org_structure"
 app_publisher = "admin"
@@ -10,6 +13,8 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "admin@gmail.com"
 app_license = "MIT"
+
+_standard_gl.validate_accounting_period = _custom_api.validate_accounting_period
 
 accounting_dimension_doctypes = ["GL Entry", "Sales Invoice", "Purchase Invoice", "Payment Entry", "Asset",
 	"Expense Claim", "Expense Claim Detail", "Expense Taxes and Charges", "Stock Entry", "Budget", "Payroll Entry", "Delivery Note",
