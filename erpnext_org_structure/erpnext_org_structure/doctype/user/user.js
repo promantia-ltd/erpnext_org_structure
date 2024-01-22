@@ -1,17 +1,6 @@
 frappe.ui.form.on('User', {
 refresh:function(frm){
 },
-before_save:function(frm,cdt,cdn){
-	frappe.call({
-		method:"erpnext_org_structure.erpnext_org_structure.doctype.user.user.update_user_permission",
-		args:{
-			email:frm.doc.email
-		},
-		async:false,
-		callback: function(r){
-		}
-	})
-}
 })
 
 frappe.ui.form.on('Branch Details', {
