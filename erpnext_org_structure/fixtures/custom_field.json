@@ -188,7 +188,7 @@
   "insert_after": "branch_details_section",
   "label": "Branch Details",
   "length": 0,
-  "mandatory_depends_on": "eval: !cur_frm.is_new()",
+  "mandatory_depends_on":null,
   "modified": "2020-10-08 13:24:27.623517",
   "name": "User-branch_details",
   "no_copy": 0,
