@@ -39,17 +39,10 @@ fixtures = [
 ]
 
 doctype_js = {
-	"User" : "erpnext_org_structure/doctype/user/user.js",
 	"Quality Inspection" : "erpnext_org_structure/doctype/quality_inspection/quality_inspection.js",
 	"Branch" : "erpnext_org_structure/doctype/branch/branch.js"
 }
-doc_events = {
-    	"User": {
-		"after_insert": ["erpnext_org_structure.erpnext_org_structure.doctype.user.user.on_save"],
-		"on_update":["erpnext_org_structure.erpnext_org_structure.doctype.user.user.on_save"],
-		"before_save": ["erpnext_org_structure.erpnext_org_structure.doctype.user.user.before_save"],
-}
-}
+
 
 override_doctype_class = {
 	'Accounting Period': 'erpnext_org_structure.api.CustomAccountingPeriod'
